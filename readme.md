@@ -1,10 +1,10 @@
 # Arquitectura para probar el registro de plugins de manera automática  
 
-Paquete externo que registra algoritmos en eco.algoritmos
+## Paquete externo que registra algoritmos en eco.algoritmos
 
 Para que un paquete externo pueda integrarse con el sistema de entry points y añadir algoritmos, debe declarar en su propio pyproject.toml el grupo eco.algoritmos con sus algoritmos.
 
-Estructura del paquete externo
+## Estructura del paquete externo
 
 paquete-externo/  
 ├── src/  
@@ -14,7 +14,7 @@ paquete-externo/
 ├── pyproject.toml  
 └── README.md  
 
-Contenido clave
+## Código del paquete a integrar
 
 src/paquete_externo/algoritmo_externo.py
 ```python 
@@ -23,7 +23,7 @@ class AlgoritmoExterno:
         return f"Procesado por AlgoritmoExterno: {data}"
 ```
 
-pyproject.toml del paquete externo
+## pyproject.toml del paquete externo
 ```python 
 [project]
 name = "paquete-externo"
@@ -42,7 +42,7 @@ package-dir = {"" = "src"}
 algoritmo_externo = "eco_externo.algoritmo_externo:AlgoritmoExterno"
 ```
 
-Uso conjunto
+## Uso conjunto
 
 Cuando instales ambos paquetes (eco y eco-externo) en el mismo entorno, la función cargar_algoritmos() del paquete eco cargará automáticamente los algoritmos internos y externos registrados en el grupo eco.algoritmos.
 
