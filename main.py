@@ -1,21 +1,36 @@
-from eco import *
-from eco.avanzadas.estadisticas import cuadrado, suma_secreta
+# from eco import *
+# from eco.avanzadas.estadisticas import cuadrado, suma_secreta
 
-s = reverse_text("eco")
-print(s)
+# s = reverse_text("eco")
+# print(s)
 
-print(suma(3, 5))
+# print(suma(3, 5))
 
-print(resta(10, 4))
+# print(resta(10, 4))
 
-# import sys
-# print(sys.path)
+# # import sys
+# # print(sys.path)
 
-print("Cuadrado de 6:", cuadrado(6))
-print("Suma secreta de 7 y 8:", suma_secreta(7, 8))
+# print("Cuadrado de 6:", cuadrado(6))
+# print("Suma secreta de 7 y 8:", suma_secreta(7, 8))
 
-print("algoritmos disponibles:")    
-from eco.algoritmos.loader import *
-algoritmos = cargar_algoritmos()
-for nombre, algoritmo in algoritmos.items():
-    print(f"Algoritmo cargado: {nombre} -> {algoritmo}")
+# print("algoritmos disponibles:")    
+# from eco.algoritmos.loader import *
+# algoritmos = cargar_algoritmos()
+# for nombre, algoritmo in algoritmos.items():
+#     print(f"Algoritmo cargado: {nombre} -> {algoritmo}")
+
+from eco.core import cargar_algoritmos
+
+
+def main():
+    algoritmos = cargar_algoritmos()
+    data = "datos de prueba"
+
+    for nombre, algoritmo in algoritmos.items():
+        resultado = algoritmo.run(data)
+        print(f"{nombre}: {resultado}")
+
+
+if __name__ == "__main__":
+    main()
