@@ -6,13 +6,13 @@ Para que un paquete externo pueda integrarse con el sistema de entry points y a�
 
 Estructura del paquete externo
 
-paquete-externo/
-├── src/
-│   └── paquete_externo/
-│       ├── __init__.py
-│       └── algoritmo_externo.py
-├── pyproject.toml
-└── README.md
+paquete-externo/  
+├── src/  
+│   └── paquete_externo/  
+│       ├── __init__.py  
+│       └── algoritmo_externo.py  
+├── pyproject.toml  
+└── README.md  
 
 Contenido clave
 
