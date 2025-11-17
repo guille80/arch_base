@@ -1,0 +1,12 @@
+[project]
+name = "eco"
+version = "0.1.0"
+description = "Plugin eco"
+authors = [{ name="Guillermo", email="guillermo@example.com" }]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.entry-points."eco.algoritmos"]
+algoritmo_a = "eco.algoritmos.algoritmo_a:AlgoritmoA"
+algoritmo_b = "eco.algoritmos.algoritmo_b:AlgoritmoB"
