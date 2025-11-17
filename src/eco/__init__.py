@@ -1,5 +1,5 @@
-from .core import EcoPlugin
-from .utils import reverse_text, suma
-from .restas import resta
+# from .core import EcoPlugin
+# from .utils import reverse_text, suma
+# from .restas import resta
 
-__all__ = ["EcoPlugin", "reverse_text", "suma", "resta"]
+# __all__ = ["EcoPlugin", "reverse_text", "suma", "resta"]
