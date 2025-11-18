@@ -1,5 +1,6 @@
 seed: 42
 rounds: 3
+round_name: "3"
 clients: 
  total: 5
  per_round: 2
