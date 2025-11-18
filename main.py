@@ -63,6 +63,15 @@ def load_config_yaml() :
     else :  
         print("El valor de 'logging.level' NO es una cadena:", data['logging']['level'])
 
+    if validar_tipo_yaml(data['clients'], "dict") :
+        print("El valor de 'clients' es un diccionario:", data['clients'])
+    else :
+        print("El valor de 'clients' no es un diccionario:", data['clients'])
+
+    if validar_tipo_yaml(data['algorithm']['params'], "dict") :
+        print("El valor de 'algorithm.params' es un diccionario:", data['algorithm']['params'])
+    else :
+        print("El valor de 'algorithm.params' no es un diccionario:", data['algorithm']['params'])
 
 def main():
     algoritmos = cargar_algoritmos()
