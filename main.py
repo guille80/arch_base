@@ -49,5 +49,10 @@ def main():
 
     # print(load("doble_suma")(3, 4))
 
+    from yaml_loader.loader import load_yaml
+
+    data = load_yaml("config.yaml")
+    print("Datos cargados desde YAML:", data)
+
 if __name__ == "__main__":
     main()
