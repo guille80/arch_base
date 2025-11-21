@@ -38,40 +38,41 @@ def load(name):
 
 from eco.core import cargar_algoritmos
 
-def load_config_yaml() :
-    from yaml_loader.loader import load_yaml, validar_tipo_yaml
 
-    data = load_yaml("config.yaml")
-    print("Datos cargados desde YAML:", data)
+# def load_config_yaml() :
+#     from yaml_loader.loader import load_yaml, validar_tipo_yaml
 
-    # Ejemplos de uso
-    # print(validar_tipo_yaml("hola", "str"))     # True
-    # print(validar_tipo_yaml(42, "int"))         # True
-    # print(validar_tipo_yaml(3.14, "float"))     # True
-    # print(validar_tipo_yaml(True, "bool"))      # True
-    # print(validar_tipo_yaml(None, "null"))      # True
-    # print(validar_tipo_yaml([1, 2, 3], "list")) # True
-    # print(validar_tipo_yaml({"a": 1}, "dict"))  # True    
+#     data = load_yaml("config.yaml")
+#     print("Datos cargados desde YAML:", data)
 
-    if validar_tipo_yaml(data['rounds'], "int") :
-        print("El valor de 'rounds' es un entero:", data['rounds'])
-    else :
-        print("El valor de 'rounds' no es un entero:", data['rounds'])
+#     # Ejemplos de uso
+#     # print(validar_tipo_yaml("hola", "str"))     # True
+#     # print(validar_tipo_yaml(42, "int"))         # True
+#     # print(validar_tipo_yaml(3.14, "float"))     # True
+#     # print(validar_tipo_yaml(True, "bool"))      # True
+#     # print(validar_tipo_yaml(None, "null"))      # True
+#     # print(validar_tipo_yaml([1, 2, 3], "list")) # True
+#     # print(validar_tipo_yaml({"a": 1}, "dict"))  # True    
 
-    if validar_tipo_yaml(data['logging']['level'], "str") :
-        print("El valor de 'logging.level' es una cadena:", data['logging']['level'])
-    else :  
-        print("El valor de 'logging.level' NO es una cadena:", data['logging']['level'])
+#     if validar_tipo_yaml(data['rounds'], "int") :
+#         print("El valor de 'rounds' es un entero:", data['rounds'])
+#     else :
+#         print("El valor de 'rounds' no es un entero:", data['rounds'])
 
-    if validar_tipo_yaml(data['clients'], "dict") :
-        print("El valor de 'clients' es un diccionario:", data['clients'])
-    else :
-        print("El valor de 'clients' no es un diccionario:", data['clients'])
+#     if validar_tipo_yaml(data['logging']['level'], "str") :
+#         print("El valor de 'logging.level' es una cadena:", data['logging']['level'])
+#     else :  
+#         print("El valor de 'logging.level' NO es una cadena:", data['logging']['level'])
 
-    if validar_tipo_yaml(data['algorithm']['params'], "dict") :
-        print("El valor de 'algorithm.params' es un diccionario:", data['algorithm']['params'])
-    else :
-        print("El valor de 'algorithm.params' no es un diccionario:", data['algorithm']['params'])
+#     if validar_tipo_yaml(data['clients'], "dict") :
+#         print("El valor de 'clients' es un diccionario:", data['clients'])
+#     else :
+#         print("El valor de 'clients' no es un diccionario:", data['clients'])
+
+#     if validar_tipo_yaml(data['algorithm']['params'], "dict") :
+#         print("El valor de 'algorithm.params' es un diccionario:", data['algorithm']['params'])
+#     else :
+#         print("El valor de 'algorithm.params' no es un diccionario:", data['algorithm']['params'])
 
 def main():
     algoritmos = cargar_algoritmos()
@@ -82,7 +83,9 @@ def main():
         print(f"{nombre}: {resultado}")
 
     # print(load("doble_suma")(3, 4))
-    
+
+    # Ejemplo de uso de carga de YAML
+    from yaml_loader.loader import load_config_yaml
     load_config_yaml()
 
 
